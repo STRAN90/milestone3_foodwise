@@ -7,6 +7,46 @@
 </head>
 <body>
 
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ url_for('sign_in') }}">Sign in</a></li>
+        </ul>
+        <nav class="my-nav">
+            <div class="nav-wrapper">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" class="brand-logo logo-fork" </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger menu"><i class="fa-solid fa-ellipsis"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+                    <li><a href="{{ url_for('categories') }}">Categories</a></li>
+                    <li><a class="dropdown-trigger btn my-btn yellow z-depth-5" href="#!" data-target="dropdown1">Account <i
+                                class="fa-solid fa-caret-down fa-xs"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header"><i class="fa-solid fa-caret-down fa-xs"></i> Account</a>
+                    <div class="collapsible-body">
+                        <ul id="" class="">
+                            <li><a href="{{ url_for('register') }}">Register</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{{ url_for('sign_in') }}">Sign in</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
     {% block content %}
 
     {% endblock %}
