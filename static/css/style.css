@@ -29,3 +29,19 @@ font-size: large;
 nav ul a {
     color: rgb(9, 51, 0);
 }
+
+/* Hero */
+
+.hero {
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-text {
+    font-family: 'Roboto', sans serif;
+    text-align: right;
+    font-weight: bolder;
+}
