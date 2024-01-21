@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 
 @app.route("/")
 def home():
-    return "Hello world"
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
